@@ -101,7 +101,7 @@ DATABASES = {
 'default': {
             "NAME": "dbmb",
             "ENGINE": "django.db.backends.postgresql",
-            "USER": "postgres",
+            "USER": "sagar",
             "PASSWORD": "Country@123#",
             "HOST":"localhost",
             "PORT" : "54321"
