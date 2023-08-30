@@ -99,12 +99,12 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 DATABASES = {
 'default': {
-            "NAME": "dbmb",
+            "NAME": "demodb",
             "ENGINE": "django.db.backends.postgresql",
-            "USER": "sagar",
-            "PASSWORD": "Country@123#",
+            "USER": "django",
+            "PASSWORD": "djangopassword",
             "HOST":"localhost",
-            "PORT" : "54321"
+            "PORT" : "5432"
             # "NAME": "onion",
             # "ENGINE": "django.db.backends.postgresql",
             # "USER": "postgres",
@@ -191,3 +191,14 @@ SIMPLE_JWT = {
 
 
 
+# Static files (CSS, JavaScript, images)
+STATIC_URL = '/static/'  # The URL prefix for static files
+
+# Absolute filesystem path to the directory that will hold your static files.
+# This is where your collectstatic command will gather static files.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Change 'staticfiles' to your desired directory name
+
+# Additional locations of static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend', 'build', 'static'),  # Path to your React app's static files
+]

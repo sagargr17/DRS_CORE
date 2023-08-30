@@ -4,6 +4,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -61,4 +62,6 @@ urlpatterns = [
     #For RecomendationSystem     
     path('aigenerator/', AiGenerator.as_view(), name="generatingAi"),
     
+    #For React FIles
+    re_path(r'^.*', TemplateView.as_view(template_name='frontend/index.html')),
 ]
